@@ -1,4 +1,43 @@
-#heading{
-    color: blueviolet;
-    background-color: black;
+.header{
+    display: flex;
+    border: 2px solid black;
+    justify-content: space-between;
+}
+img{
+    width: 200px;
+    height: 100px;
+}
+.nav-items{
+    padding: 0px 10px;
+}
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+    font-size: 24px;
+    
+}
+.nav-items > ul > li{
+    padding: 10px;
+    margin: 10px;
+}
+
+.rest-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.card-container{
+    width: 200px;
+    background-color: rgb(219, 217, 217);
+    margin: 5px;
+}
+
+.card-container:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.card-img{
+    width: 190px;
+    margin: 5px;
 }
