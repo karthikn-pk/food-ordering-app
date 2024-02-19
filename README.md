@@ -12,3 +12,26 @@
 - minification
 - error handling
 - tree shaking -remove unused thing in code
+
+/**
+ * header
+ * -logo
+ * -nav items
+ * body
+ * -search
+ * -cards
+ * footer
+ * -address
+ * -links
+ * 
+ * 
+ *  */ 
+
+ # types of export and import components
+
+ export default component;
+ import component from "path"
+
+
+ export const component;
+ import {component} from "path";
