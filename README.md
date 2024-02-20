@@ -35,3 +35,10 @@
 
  export const component;
  import {component} from "path";
+
+ # react hooks
+
+ - normal javascript utility functions
+ - useState() superpowerful react state variable
+ - whenevr state variable change react rerender components
+ - useEffect()
