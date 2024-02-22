@@ -37,8 +37,10 @@
  import {component} from "path";
 
  # react hooks
-
  - normal javascript utility functions
- - useState() superpowerful react state variable
- - whenevr state variable change react rerender components
- - useEffect()
+ - # useState() 
+ - superpowerful react state variable
+ - useState has two parameters 1) current state variable 2)function used to update the current state variable
+ - const [listofCards,setlistofCards]=useState([]);
+ - whenevr state variable change react rerender entire component
+ - # useEffect()
