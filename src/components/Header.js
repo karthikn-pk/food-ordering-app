@@ -12,10 +12,11 @@ export const Header=()=>{
         <div className="nav-items">
         <ul>
         <li>Home</li>
+        <li>About Us</li>
         <li>Contact Us</li>
         <li>Cart</li>
         <button className="login" onClick={()=>
-            setloginbtn("Logout")
+            loginbtn==="Login"?setloginbtn("Logout"):setloginbtn("Login")
         }>{loginbtn}</button>
         
 

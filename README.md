@@ -35,7 +35,10 @@
 
  export const component;
  import {component} from "path";
-
+ # why react is so fast?
+ - react has react fiber 
+ - its a reconciliation algorithm comparing old virtual dom and new virtual dom and only updates the modified dom in ui. this is why react is fast
+- whenever the state variable gets updated, react triggers reconcialition cycles ( rerenders entire component)
  # react hooks
  - normal javascript utility functions
  - # useState() 
@@ -44,3 +47,7 @@
  - const [listofCards,setlistofCards]=useState([]);
  - whenevr state variable change react rerender entire component
  - # useEffect()
+
+ # two types of routing
+ client side routing
+ server side routing

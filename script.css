@@ -4,7 +4,7 @@
     justify-content: space-between;
 }
 img{
-    width: 300px;
+    width: 200px;
     height: 150px;
 }
 .nav-items{
@@ -54,4 +54,8 @@ img{
 }
 .login{
     padding: 0 20px;
+}
+.filter{
+    display: flex;
+    margin: 10px;
 }
