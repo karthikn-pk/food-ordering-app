@@ -1,5 +1,6 @@
 import RestCard from "./RestCard";
 import Shimmer from "./shimmer";
+import {Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const Body=()=>{
@@ -46,7 +47,7 @@ const Body=()=>{
             <div className="rest-container">
             {
                 filteredCards.map((ele)=>(
-                    <RestCard key={ele.info.id} restData={ele}/>
+                    <Link key={ele.info.id} to={"/menu/"+ele.info.id}><RestCard  restData={ele}/></Link>
                 ))
             }
             </div>
