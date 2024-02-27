@@ -49,5 +49,8 @@
  - # useEffect()
 
  # two types of routing
- client side routing
- server side routing
+ - client side routing
+ - server side routing
+ Outlet
+ - class based component
+ - super(props) used to extract parent class
