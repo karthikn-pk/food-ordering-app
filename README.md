@@ -54,3 +54,24 @@
  Outlet
  - class based component
  - super(props) used to extract parent class
+ - when class component is called/loaded first constructor is called and then render method is called.
+ # life cycle of react class component 
+ 1- constructor
+ 2- render method
+ 3- component did mount - used to make api call
+
+ when it has multiple childs
+ - parent constructor 
+ - parent render 
+
+    - first child constructor 
+    - first child render 
+
+    - second child constructor
+    - second child render
+
+    <DOM updated - in single batch>
+
+    - first child component did mount
+    - second child component did mount
+    - parent component did mount
