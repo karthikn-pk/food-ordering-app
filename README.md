@@ -75,3 +75,27 @@
     - first child component did mount
     - second child component did mount
     - parent component did mount
+
+* Mounting
+    constructor(initial) 
+    render(initl)
+        <html dummy>
+    componentdid mount
+        api call
+        this.setState() --> state var is updated
+
+* Update cycle
+    render(API Data)
+    <html updates API data>
+    component did update()
+
+*unmounting(removing from the UI)
+    component will unmount()
+
+* lazy loading
+* dynamic loadin
+* split coding
+ const About = lazy()=>import("./components/About");
+ element:(
+    <suspence> <About/></suspence>
+ )

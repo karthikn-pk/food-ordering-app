@@ -16,6 +16,8 @@ class About  extends React.Component{
         <h1>food ordering app</h1>
         <h2>Restaurants</h2>
         <Usercls name={"karthikeyan from cls"} location={"Vellore"}/>
+        <Usercls name={"karthikeyan from cls"} location={"Vellore"}/>
+
     </div>
         )
     }
