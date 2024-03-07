@@ -6,16 +6,16 @@ export const Header=()=>{
     const [loginbtn,setloginbtn]=useState("Login");
     return (
         
-        <div className="header">
+        <div className="flex justify-between bg-orange-200 h-30 shadow-md">
         <div className="logo-container"> 
-        <img className="logo" src={LOGO_URL}/>
+        <img className="w-40" src={LOGO_URL}/>
         </div>
-        <div className="nav-items">
-        <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li>Cart</li>
+        <div className="flex items-center">
+        <ul className="flex m-4 p-4 ">
+        <li className="px-3"><Link to="/">Home</Link></li>
+        <li className="px-3"><Link to="/about">About Us</Link></li>
+        <li className="px-3"><Link to="/contact">Contact</Link></li>
+        <li className="px-3">Cart</li>
         <button className="login" onClick={()=>
             loginbtn==="Login"?setloginbtn("Logout"):setloginbtn("Login")
         }>{loginbtn}</button>

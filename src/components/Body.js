@@ -36,9 +36,10 @@ const Body=()=>{
     return listofCards.length===0 ? <Shimmer/> :
      ( 
         <div className="body">
-            <div className="filter">
-                <div>
-                    <input type="text" className="search-box" value={searchText} onChange={(e)=>setsearchText(e.target.value)}/> <button onClick={()=>{
+            <div className="flex items-center">
+                <div >
+                    <input type="text" className="border border-solid border-black p-4 m-4 " value={searchText} onChange={(e)=>setsearchText(e.target.value)}/> 
+                    <button className="p-2 m-2 h-12 bg-green-500 rounded-lg" onClick={()=>{
                         const filteredSearch=listofCards.filter(
                             (res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase())
                         )
@@ -47,7 +48,8 @@ const Body=()=>{
 
                     }}>search</button>
                 </div>
-                <button className="filterModel" onClick={()=>{
+
+                <button className="h-12 px-2 m-2 bg-green-500 rounded-lg" onClick={()=>{
                     const filteredList=listofCards.filter(
                         (res)=> res.info.avgRating > 4.2
                     );
@@ -55,7 +57,7 @@ const Body=()=>{
                 }}>Top rated Restaurants</button>
                 
             </div>
-            <div className="rest-container">
+            <div className="flex flex-wrap p-4 m-4">
             {
                 filteredCards.map((ele)=>(
                     <Link key={ele.info.id} to={"/menu/"+ele.info.id}><RestCard  restData={ele}/></Link>
