@@ -1,4 +1,3 @@
-import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 
@@ -10,23 +9,28 @@ const RestaurantMenu=()=>{
     const menuInfo=useRestaurantMenu(resid);
    
     
-    const { name, cuisines, costForTwoMessage } = menuInfo?.data?.cards[2]?.card?.card?.info || {};
+    // const { name, cuisines, costForTwoMessage } = menuInfo?.data?.cards[2]?.card?.card?.info || {};
+    console.log(menuInfo);
+    const Recommendcategories=menuInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((cat)=>
+    cat.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+);
+    const categories=menuInfo?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((cat)=>
+        cat.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory"
+    );
 
-    // const {itemCards} = menuInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+    console.log(Recommendcategories);
+
+    const {name, cuisines, costForTwoMessage,avgRating} = menuInfo?.data?.cards[0]?.card?.card?.info || {};
     return (
         
         <div className="menu">
-            <h1>{name}</h1>
+            <h1>{name}</h1> <h2>{avgRating}</h2>
             <h1>{cuisines}</h1>
             <h2>{costForTwoMessage}</h2>
-            <h2>Menu</h2>
-            {/* <ul>  
-                {itemCards.map((item)=>(
-                    <li >{item.card.info.name}  </li>
-                ))
-            } 
-            </ul> */}
+            
         </div>
     )
 };
+
+
 export default RestaurantMenu;

@@ -1,7 +1,7 @@
 const RestCard=(props)=>{
     const {restData}=props;
     return (
-    <div className="w-[200px] bg-gray-200 p-4 m-4">
+    <div className="w-[200px] bg-gray-200 p-4 m-4 hover:w-[220px]">
         <img alt="photo" className="card-img" src={
             "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+restData.info.cloudinaryImageId
             } />
@@ -15,6 +15,7 @@ const RestCard=(props)=>{
         
     </div>
     )
-}
+};
+
 
 export default RestCard;

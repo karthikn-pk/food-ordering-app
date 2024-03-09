@@ -29,7 +29,7 @@ const Body=()=>{
         return(
             <h1>you are offline</h1>
 
-        )
+        );
         
     
 
@@ -60,7 +60,9 @@ const Body=()=>{
             <div className="flex flex-wrap p-4 m-4">
             {
                 filteredCards.map((ele)=>(
-                    <Link key={ele.info.id} to={"/menu/"+ele.info.id}><RestCard  restData={ele}/></Link>
+                    <Link key={ele.info.id} to={"/menu/"+ele.info.id}>
+                    
+                        <RestCard  restData={ele}/></Link>
                 ))
             }
             </div>
