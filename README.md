@@ -105,3 +105,29 @@ its a function which takes functions as arguments and enhance it and returns bac
 
 controlled and uncontrolled
 lifting the state
+
+* React context provides accessibility to all component to read or provide context.
+- syntax
+import { createContext } from 'react';
+
+const ThemeContext = createContext('light');
+
+SomeContext.Provider lets you provide the context value to components.
+````
+function App() {
+  const [theme, setTheme] = useState('light');
+  // ...
+  return (
+    <ThemeContext.Provider value={theme}>
+      <Page />
+    </ThemeContext.Provider>
+  );
+}
+````
+````
+function Button() {
+  // ✅ Recommended way
+  const theme = useContext(ThemeContext); //reads context
+  return <button className={theme} />;
+}
+````
