@@ -1,10 +1,10 @@
-import { useState } from "react";
+
 import ItemList from "./ItemList";
-const RestaurantCategory=({data})=>{
-  const [showItems,setshowItems]=useState(false)
+const RestaurantCategory=({data,showItems,setshowIndex})=>{
+  
 
   const handleClick=()=>{
-    setshowItems(!showItems)
+    setshowIndex();
   }
     
     return (
@@ -16,7 +16,7 @@ const RestaurantCategory=({data})=>{
 </svg>
           </div>
           
-{showItems?<ItemList items={data.itemCards} />: null}
+{showItems?<ItemList items={data.itemCards} /> : null}
 
   </div>
     )

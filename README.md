@@ -102,3 +102,6 @@
 
 * higher order functions
 its a function which takes functions as arguments and enhance it and returns back a new function.///
+
+controlled and uncontrolled
+lifting the state
