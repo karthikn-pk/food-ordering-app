@@ -8,17 +8,22 @@ import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Error from "./components/Error";
 import UserContext from "./utils/UserContext";
-
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 const AppLayout=()=>{
 
     const[user,setuser]=useState("karthi")
     return (
-        <UserContext.Provider value={{loggedinUser:user}}>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{loggedinUser:user}}>
             <div>
         <Header/>
         <Outlet/>
         </div>
         </UserContext.Provider>
+        </Provider>
+        
         
     )
 }
@@ -45,6 +50,10 @@ const appRouter=createBrowserRouter([
             {
                 path:"/menu/:resid",
                 element:<RestaurantMenu/>
+            },
+            {
+                path:"/cart",
+                element:<Cart/>
             },
         ]
     },

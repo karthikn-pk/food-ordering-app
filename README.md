@@ -131,3 +131,11 @@ function Button() {
   return <button className={theme} />;
 }
 ````
+
+# Redux toolkit
+- npm i @reduxjs/toolkit and react redux
+- build our store
+- connect our store to our app
+- slice(cart slice)
+- dispatch(action)
+- selector
