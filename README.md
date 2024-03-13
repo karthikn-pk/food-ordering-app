@@ -140,3 +140,10 @@ function Button() {
 - dispatch(action)
 - selector
  - either we need to mutate existing state or return a new state in redux tookit
+
+# react testing library
+- install react testing library
+- install jest
+- install babel dependencies along with jest
+- configure babel 
+- disable babel in parcel to avoid conflict
