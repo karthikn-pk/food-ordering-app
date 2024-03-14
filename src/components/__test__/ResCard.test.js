@@ -6,7 +6,7 @@ import "@testing-library/jest-dom";
 
 
 it("should render all restaurant cards",()=>{
-    render(<RestCard resData={MOCK_DATA}/>)
-    const ResName=screen.getByText("LunchBox - Meals and Thalis");
+    render(<RestCard restData={MOCK_DATA}/>)
+    const ResName=screen.getByText("Kwality Walls Frozen Dessert and Ice Cream Shop");
     expect(ResName).toBeInTheDocument();
 })

@@ -1,8 +1,8 @@
 const RestCard=(props)=>{
     const {restData}=props;
-    
+    console.log(restData);
     const {
-        cloudinaryImageId,
+        
         name,
         cuisines,
         avgRating,
@@ -11,9 +11,9 @@ const RestCard=(props)=>{
       } = restData?.info;
     return (
     <div className="w-[200px] bg-gray-200 p-4 m-4 hover:w-[220px]">
-        <img alt="photo" className="card-img" src={
+        {/* <img alt="photo" className="card-img" src={
             "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId
-            } />
+            } /> */}
         <h3>{name}</h3>
         <div className="flex">
         <h3>Rating : {avgRating}</h3><img className="w-4 h-5 mx-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/2153px-Star_icon_stylized.svg.png"/>

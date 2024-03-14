@@ -152,3 +152,15 @@ function Button() {
 - install npm i -D @babel/preset-react >>this babel preset is used to convert JSX code into html
 - include ["@babel/preset-react",{runtime:"automatic"}] in babel config file
 - install npm i -D @testing-library/jest-dom
+
+
+add this to package.json file to run test cases immediately after saving the file
+````
+"scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest",
+    "watch-test":"jest --watch"
+  },
+````
+>> npm run watch-test
