@@ -147,3 +147,8 @@ function Button() {
 - install babel dependencies along with jest
 - configure babel 
 - disable babel in parcel to avoid conflict
+- npx jest --init
+- install jsdom library >npm install --save-dev jest-environment-jsdom
+- install npm i -D @babel/preset-react >>this babel preset is used to convert JSX code into html
+- include ["@babel/preset-react",{runtime:"automatic"}] in babel config file
+- install npm i -D @testing-library/jest-dom
