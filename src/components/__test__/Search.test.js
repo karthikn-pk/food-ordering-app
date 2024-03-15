@@ -47,3 +47,19 @@ it("should display restaurant cards according to input text",async ()=>{
     expect(cards.length).toBe(1);
     
 });
+
+it("should display top rated restaurant", async()=>{
+    await act(async()=>render(
+        <BrowserRouter>
+        <Body/>
+        </BrowserRouter>
+        
+    ));
+    const topRatedResBtn=screen.getByRole("button",{name:"Top rated Restaurants"})
+    fireEvent.click(topRatedResBtn);
+    const cards=screen.getAllByTestId("resCard")
+    expect(cards.length).toBe(11);
+
+
+}
+)
