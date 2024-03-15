@@ -21,7 +21,7 @@ export const Header=()=>{
         <li className="px-3"><Link to="/about">About Us</Link></li>
         <li className="px-3"><Link to="/contact">Contact</Link></li>
         <li className="px-3 font-bold">
-            <Link to={"/cart"}>Cart -( {cartItems.length})</Link></li>
+            <Link to={"/cart"}>Cart-({cartItems.length})</Link></li>
         <li className="px-3">{loggedinUser}</li>
         <button className="login" onClick={()=>
             loginbtn==="Login"?setloginbtn("Logout"):setloginbtn("Login")

@@ -27,7 +27,7 @@ it("should have cart items",()=>{
     </Provider></BrowserRouter>
     
     )
-    const cartItems=screen.getByText("Cart -( 0)");
+    const cartItems=screen.getByText("Cart-(0)");
     expect(cartItems).toBeInTheDocument(); 
 
 });
