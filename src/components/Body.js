@@ -10,7 +10,7 @@ const Body=()=>{
     const [filteredCards,setfilteredCards]=useState([]);
 
     const [searchText,setsearchText]=useState("");
-    
+
     useEffect(()=>{
         fetchData();
     },[]);
@@ -38,7 +38,7 @@ const Body=()=>{
         <div className="body">
             <div className="flex items-center">
                 <div >
-                    <input type="text" className="border border-solid border-black p-4 m-4 " value={searchText} onChange={(e)=>setsearchText(e.target.value)}/> 
+                    <input type="text" data-testid="searchInput" className="border border-solid border-black p-4 m-4 " value={searchText} onChange={(e)=>setsearchText(e.target.value)}/> 
                     <button className="p-2 m-2 h-12 bg-green-500 rounded-lg" onClick={()=>{
                         const filteredSearch=listofCards.filter(
                             (res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase())
