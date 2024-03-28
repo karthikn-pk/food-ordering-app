@@ -15,11 +15,11 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch("/.netlify/functions/netlify-function");
-    console.log(data);
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
     const json = await data.json();
     console.log(json);
-
     setlistofCards(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -31,10 +31,9 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) return <h1>you are offline</h1>;
 
-  // return listofCards.length === 0 ? (
-  //   <Shimmer />
-  // ) :
-  return (
+  return listofCards.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body bg-[#408EC6]">
       <div className="flex items-center">
         <div>
