@@ -18,7 +18,6 @@ const Body = () => {
     const data = await fetch("/.netlify/functions/netlify-function");
     const json = await data.json();
 
-    console.log(json);
     setlistofCards(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -30,9 +29,10 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) return <h1>you are offline</h1>;
 
-  return listofCards.length === 0 ? (
-    <Shimmer />
-  ) : (
+  // return listofCards.length === 0 ? (
+  //   <Shimmer />
+  // ) :
+  return (
     <div className="body bg-[#408EC6]">
       <div className="flex items-center">
         <div>
