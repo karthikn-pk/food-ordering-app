@@ -1,0 +1,24 @@
+# Set the base directory for Netlify functions
+[functions]
+  directory = "functions"
+  node_bundler = "esbuild"
+
+# Configure redirects
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Add headers configuration
+[[headers]]
+  # Set Content-Security-Policy header
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+
+# Add branch deploys configuration
+[branch.deploy]
+  # Enable branch deploys for the 'develop' branch
+  deploy = "develop"
+  command = "npm run build:develop"
+  # Add other branch deploy settings as needed
