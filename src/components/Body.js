@@ -15,7 +15,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch("/.netlify/functions/netlify-function");
+    const data = await fetch("/.functions/netlify-function");
     console.log(data);
     const json = await data.json();
     console.log(json);
