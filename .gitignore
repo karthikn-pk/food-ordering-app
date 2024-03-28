@@ -3,6 +3,6 @@
 /dist
 /coverage
 
-netlify
+
 # Local Netlify folder
 .netlify
