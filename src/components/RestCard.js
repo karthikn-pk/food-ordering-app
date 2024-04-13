@@ -8,7 +8,7 @@ const RestCard = (props) => {
   return (
     <div
       data-testid="resCard"
-      className="w-[250px] h-[430px] bg-gray-200 text-base font-serif  p-4 m-4 ">
+      className="w-[250px] h-[430px] bg-[#D9EDBF] text-base font-roboto  p-4 m-4 ">
       <img
         alt="photo"
         className="card-img w-full h-[200px] object-cover"

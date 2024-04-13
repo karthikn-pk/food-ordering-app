@@ -21,7 +21,7 @@ const RestaurantMenu = () => {
   const { name, cuisines, costForTwoMessage } =
     menuInfo?.data?.cards[2]?.card?.card?.info || {};
   return (
-    <div className="text-center  bg-[#408EC6] font-sans">
+    <div className="text-center   font-roboto">
       <h1 className="font-bold  text-xl my-6">{name}</h1>
       <h1>
         {cuisines} - {costForTwoMessage}

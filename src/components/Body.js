@@ -34,7 +34,7 @@ const Body = () => {
   return listofCards.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body bg-[#408EC6]">
+    <div className="body font-roboto">
       <div className="flex items-center">
         <div>
           <input
@@ -46,7 +46,7 @@ const Body = () => {
             placeholder="Search Food"
           />
           <button
-            className="p-2 m-2 h-12 bg-[#1E2761] text-white font-bold text-xl rounded-lg"
+            className="p-2 m-2 h-12 bg-[#FF9800]   text-xl rounded-lg"
             onClick={() => {
               const filteredSearch = listofCards.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -58,7 +58,7 @@ const Body = () => {
         </div>
 
         <button
-          className="h-12 px-2 m-2 bg-[#1E2761] font-bold text-xl text-white rounded-lg"
+          className="h-12 px-2 m-2 bg-[#FF9800]  text-xl  rounded-lg"
           onClick={() => {
             const filteredList = listofCards.filter(
               (res) => res.info.avgRating > 4.2

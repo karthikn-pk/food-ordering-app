@@ -35,7 +35,7 @@ const ItemList = ({ items }) => {
             />
             <div className="relative left-0 right-0 ">
               <button
-                className=" bg-[#1E2761] text-white rounded-lg text-base p-2"
+                className=" bg-[#FF9800]  rounded-lg text-base p-2"
                 onClick={() => handleAddItem(item)}>
                 Add +
               </button>
