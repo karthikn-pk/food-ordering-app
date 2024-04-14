@@ -11,7 +11,7 @@ export const Header = () => {
   const [loginbtn, setloginbtn] = useState("Login");
   const cartItems = useSelector((store) => store.cart.items);
   return (
-    <div className="flex justify-between bg-[#E53935] text-white font-roboto h-30 shadow-md">
+    <div className="flex justify-between bg-[#E53935] text-white font-roboto h-30 shadow-lg">
       <div className="logo-container">
         <img className="w-40 rounded-full " src={logo} />
       </div>

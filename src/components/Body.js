@@ -35,7 +35,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body font-roboto ">
-      <div className="flex items-center">
+      <div className="flex justify-center">
         <div>
           <input
             type="text"
@@ -43,10 +43,10 @@ const Body = () => {
             className="border border-solid border-black p-4 m-4 rounded-lg w-60"
             value={searchText}
             onChange={(e) => setsearchText(e.target.value)}
-            placeholder="Search Food"
+            placeholder="Search Your Food"
           />
           <button
-            className="p-2 m-2 h-12 bg-[#FF9800]   text-xl rounded-lg"
+            className="p-2 m-2 h-12 bg-[#FF9800]  text-xl rounded-lg"
             onClick={() => {
               const filteredSearch = listofCards.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -55,18 +55,17 @@ const Body = () => {
             }}>
             search
           </button>
+          <button
+            className="h-12 px-2 m-2 bg-[#FF9800]  text-xl  rounded-lg"
+            onClick={() => {
+              const filteredList = listofCards.filter(
+                (res) => res.info.avgRating > 4.2
+              );
+              setfilteredCards(filteredList);
+            }}>
+            Top rated Restaurants
+          </button>
         </div>
-
-        <button
-          className="h-12 px-2 m-2 bg-[#FF9800]  text-xl  rounded-lg"
-          onClick={() => {
-            const filteredList = listofCards.filter(
-              (res) => res.info.avgRating > 4.2
-            );
-            setfilteredCards(filteredList);
-          }}>
-          Top rated Restaurants
-        </button>
       </div>
       <div className="flex flex-wrap p-4 m-4 justify-center">
         {filteredCards.map((ele) => (
