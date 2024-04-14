@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { LOGO_URL } from "../utils/constants";
 import logo from "../assets/foodapplogo.jpg";
+import { FaShoppingCart } from "react-icons/fa";
+
 import UserContext from "../utils/UserContext";
 import { useSelector } from "react-redux";
 export const Header = () => {
@@ -15,18 +16,23 @@ export const Header = () => {
         <img className="w-40 rounded-full " src={logo} />
       </div>
       <div className="flex items-center">
-        <ul className="flex  font-bold  font-sans text-2xl m-4 p-4 ">
+        <ul className="flex  font-bold  font-roboto text-2xl m-4 p-4 ">
           <li className="px-3">
             <Link to="/">Home</Link>
           </li>
           <li className="px-3">
-            <Link to="/about">About Us</Link>
+            <Link to="/about">About</Link>
           </li>
           <li className="px-3">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="px-3 ">
-            <Link to={"/cart"}>Cart-({cartItems.length})</Link>
+          <li className="px-3  relative">
+            <Link to={"/cart"}>
+              <FaShoppingCart />
+              <span className="text-black bg-green-500 rounded-full ml-4 px-1 absolute top-[-20px] right-[-9px] ">
+                {cartItems.length}
+              </span>
+            </Link>
           </li>
           <li className="px-3">{loggedinUser}</li>
           <button

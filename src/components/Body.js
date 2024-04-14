@@ -34,7 +34,7 @@ const Body = () => {
   return listofCards.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body font-roboto">
+    <div className="body font-roboto ">
       <div className="flex items-center">
         <div>
           <input
@@ -68,7 +68,7 @@ const Body = () => {
           Top rated Restaurants
         </button>
       </div>
-      <div className="flex flex-wrap p-4 m-4">
+      <div className="flex flex-wrap p-4 m-4 justify-center">
         {filteredCards.map((ele) => (
           <Link key={ele.info.id} to={"/menu/" + ele.info.id}>
             <RestCard restData={ele} />
