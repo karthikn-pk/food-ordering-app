@@ -28,8 +28,8 @@ const Body = () => {
     );
   };
 
-  const onlineStatus = useOnlineStatus();
-  if (onlineStatus === false) return <h1>you are offline</h1>;
+  // const onlineStatus = useOnlineStatus();
+  // if (onlineStatus === false) return <h1> you are offline</h1>;
 
   return listofCards.length === 0 ? (
     <Shimmer />
