@@ -28,14 +28,20 @@ const Body = () => {
     );
   };
 
-  // const onlineStatus = useOnlineStatus();
-  // if (onlineStatus === false) return <h1> you are offline</h1>;
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false)
+    return (
+      <h1 className="text-3xl text-center text-red-600 font-roboto font-bold">
+        {" "}
+        you are offline
+      </h1>
+    );
 
   return listofCards.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body font-roboto ">
-      <div className="flex justify-center">
+      <div className="flex flex-wrap justify-center">
         <div>
           <input
             type="text"
