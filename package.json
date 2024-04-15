@@ -2,8 +2,6 @@
   "name": "namaste_react",
   "version": "1.0.0",
   "description": "\"react web app\"",
-  "type": "module",
-  "module": "App.js",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
