@@ -27,7 +27,7 @@ const Cart = () => {
           <h1 className="text-2xl">
             ₹
             {cartItems.reduce((acc, item) => {
-              price = item?.card?.info?.price / 100;
+              let price = item?.card?.info?.price / 100;
               acc = acc + price;
               return acc;
             }, 0)}
