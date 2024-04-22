@@ -6,7 +6,7 @@ const RestCard = (props) => {
     restData?.info;
 
   return (
-    <div className="w-full sm:w-[280px] h-auto bg-[#D9EDBF] text-base font-roboto p-4 m-4">
+    <div className="w-[280px] h-auto bg-[#D9EDBF] text-base font-roboto p-4 m-4">
       <img
         alt="photo"
         className="w-full h-[200px] object-cover"
@@ -21,9 +21,9 @@ const RestCard = (props) => {
             {avgRating}
           </span>
         </h3>
-        <span className="hidden md:inline">.</span>
+        <span className="hidden inline">.</span>
         <h4>{costForTwo}</h4>
-        <span className="hidden md:inline">.</span>
+        <span className="hidden inline">.</span>
         <h4>{sla.deliveryTime} Mins</h4>
       </div>
     </div>
