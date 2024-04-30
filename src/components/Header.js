@@ -11,12 +11,12 @@ export const Header = () => {
   const [loginbtn, setloginbtn] = useState("Login");
   const cartItems = useSelector((store) => store.cart.items);
   return (
-    <div className="flex justify-between bg-[#E53935] text-white font-roboto h-30 shadow-lg">
-      <div className="logo-container">
-        <img className="w-40 rounded-full " src={logo} />
+    <div className="flex justify-between bg-[#E53935]  text-white font-roboto h-30 shadow-lg">
+      <div className="logo-container my-auto">
+        <img className="w-40 sm:w-12 rounded-full " src={logo} />
       </div>
       <div className="flex items-center">
-        <ul className="flex  font-bold  font-roboto text-2xl m-4 p-4 ">
+        <ul className="flex  font-bold sm:text-xs font-roboto text-2xl m-4 p-4 ">
           <li className="px-3">
             <Link to="/">Home</Link>
           </li>
