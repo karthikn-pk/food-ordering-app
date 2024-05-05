@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <div className="font-roboto bg-green-300 w-[1250px] mx-auto p-4">
+      <div className="font-roboto bg-green-300 w-[1250px] sm:w-[250px] mx-auto p-4">
         <h1 className="text-3xl text-center p-6">Quick Bite</h1>
         <h1 className="text-2xl text-red-600 text-center font-bold p-4">
           Welcome to Quick Bite
@@ -20,7 +20,7 @@ const About = () => {
           HOME!!!
         </p>
       </div>
-      <footer className="absolute bottom-0 bg-[#2C7865] w-full h-12">
+      <footer className="absolute bottom-0 bg-[#2C7865] w-full sm:w-20 h-12">
         <h6 className="text-center font-bold justify-center">Created by PK</h6>
       </footer>
     </div>
