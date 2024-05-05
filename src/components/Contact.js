@@ -12,7 +12,7 @@ const Contact = () => {
             <input
               type="text"
               id="email"
-              className="m-4 bg-green-300 border-b-2 border-black focus:outline-none"
+              className="m-4 bg-green-300 border-b-2 sm:w-12 border-black focus:outline-none"
             />
           </div>
           <div className="flex flex-row items-center">
@@ -20,7 +20,7 @@ const Contact = () => {
             <input
               type="text"
               id="name"
-              className="m-4 bg-green-300 border-b-2 border-black focus:outline-none"
+              className="m-4 bg-green-300 border-b-2 sm:w-12 border-black focus:outline-none"
             />
           </div>
           <button className="bg-[#FF9800] w-24 sm:w-12 text-xl sm:text-xs rounded-lg p-2 m-4">
