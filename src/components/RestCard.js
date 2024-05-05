@@ -6,7 +6,7 @@ const RestCard = (props) => {
     restData?.info;
 
   return (
-    <div className="w-[280px] h-auto bg-[#D9EDBF] text-base font-roboto p-4 m-4">
+    <div className="w-[280px] h-auto bg-[#D9EDBF] text-base rounded-md font-roboto p-4 m-4">
       <img
         alt="photo"
         className="w-full h-[200px] object-cover"

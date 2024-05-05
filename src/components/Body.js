@@ -58,6 +58,7 @@ const Body = () => {
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setfilteredCards(filteredSearch);
+              setsearchText("");
             }}>
             search
           </button>
@@ -70,6 +71,14 @@ const Body = () => {
               setfilteredCards(filteredList);
             }}>
             Top rated Restaurants
+          </button>
+          <button
+            className="h-12 px-2 m-2 bg-[#00ff48]  text-xl  rounded-lg"
+            onClick={() => {
+              const filteredVeg = listofCards.filter((v) => v.info.veg == true);
+              setfilteredCards(filteredVeg);
+            }}>
+            Veg
           </button>
         </div>
       </div>

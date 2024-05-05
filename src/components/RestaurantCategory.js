@@ -1,21 +1,17 @@
 import ItemList from "./ItemList";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
-const RestaurantCategory = ({ data, showItems, setshowIndex }) => {
-  const handleClick = () => {
-    setshowIndex();
-  };
-
+const RestaurantCategory = ({ data, isOpen, toggleCategory }) => {
+  console.log(isOpen);
   return (
-    <div className="w-6/12 cursor-pointer bg-[#D9EDBF] mx-auto my-4 p-2  shadow-lg ">
-      <div className="flex justify-between" onClick={handleClick}>
+    <div className="w-6/12 sm:w-10/12 cursor-pointer bg-[#D9EDBF] mx-auto my-4 p-2  shadow-lg ">
+      <div className="flex justify-between" onClick={toggleCategory}>
         <span className="font-bold">
           {data.title} ({data.itemCards.length})
         </span>
         <MdKeyboardDoubleArrowDown />
       </div>
-
-      {showItems ? <ItemList items={data.itemCards} /> : null}
+      {isOpen && <ItemList items={data.itemCards} />}{" "}
     </div>
   );
 };

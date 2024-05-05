@@ -7,7 +7,7 @@ const RestaurantMenu = () => {
   const { resid } = useParams();
 
   const menuInfo = useRestaurantMenu(resid);
-  const [showIndex, setshowIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null); // State to track the index of the open category
 
   const Recommendcategories =
     menuInfo?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
@@ -15,8 +15,6 @@ const RestaurantMenu = () => {
         cat?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-
-  console.log(Recommendcategories);
 
   const { name, cuisines, costForTwoMessage } =
     menuInfo?.data?.cards[2]?.card?.card?.info || {};
@@ -30,9 +28,9 @@ const RestaurantMenu = () => {
         ? Recommendcategories.map((item, index) => (
             <RestaurantCategory
               key={item?.card?.card?.title}
-              showItems={index === showIndex ? true : false}
-              setshowIndex={() => {
-                setshowIndex(index);
+              isOpen={index === openIndex} // Pass isOpen prop to determine if the category is open
+              toggleCategory={() => {
+                setOpenIndex(index === openIndex ? null : index); // Toggle the index of the open category
               }}
               data={item?.card?.card}
             />

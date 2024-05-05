@@ -12,19 +12,26 @@ const Cart = () => {
   };
   return (
     <div className="text-center font-roboto">
-      <h1 className="font-bold text-2xl">Your Cart </h1>
-      <button
-        className=" bg-[#FF9800] p-2 m-2 rounded-md"
-        onClick={handleClearCart}>
-        Clear Cart
-      </button>
-      {cartItems.length === 0 && <h1>Cart is empty</h1>}
-      <div className="w-6/12 m-auto">
+      <div className="flex justify-center my-4 p-3">
+        <h1 className="font-bold text-2xl"> Cart Items </h1>
+        <button
+          className=" bg-[#FF9800] p-2 m-2 rounded-md"
+          onClick={handleClearCart}>
+          Clear Cart
+        </button>
+      </div>
+
+      {cartItems.length === 0 && (
+        <h1 className="text-red-600 font-bold text-2xl sm:text-xs">
+          Cart is empty
+        </h1>
+      )}
+      <div className="w-6/12 sm:w-10/12 m-auto">
         <ItemList items={cartItems} />
 
-        <div className="bg-[#3ebb53] p-4 rounded-lg flex justify-evenly font-bold font mb-4">
-          <h1 className="text-2xl  ">Total Amount </h1>
-          <h1 className="text-2xl">
+        <div className="bg-[#3ebb53] sm:w-10/12 p-4 rounded-lg flex justify-evenly font-bold font mb-4">
+          <h1 className="text-2xl sm:text-xs ">Total Amount </h1>
+          <h1 className="text-2xl sm:text-xs">
             ₹
             {cartItems.reduce((acc, item) => {
               let price = item?.card?.info?.price / 100;
